@@ -11,31 +11,37 @@ const q_hash = [
 ];
 
 export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      question: question()
+    }
+  }
+  updateText = () => {
+    this.setState({question: question()})
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>{question}</Text>
+        <Text>{this.state.question}</Text>
         <Icon
           raised
           name='refresh'
           type='font-awesome'
           color='#78B9FF'
-          onPress={() => Alert.alert('本当はReloadしたい')} //TODO: 本当にReloadする
+          onPress={() => this.updateText()}
         />
       </View>
     );
   }
 }
 
-function onPressReloadQuestion() {
-  let question = q_hash[Math.floor(Math.random() * q_hash.length)]
-  const text = document.getElementsByName(Text)
-  window.addEventListener('click', function() {
-    text.innerHTML = question;
-  });
+
+const question = () => {
+  return q_hash[Math.floor(Math.random() * q_hash.length)];
 }
 
-let question = q_hash[Math.floor(Math.random() * q_hash.length)]
 
 const styles = StyleSheet.create({
   container: {
