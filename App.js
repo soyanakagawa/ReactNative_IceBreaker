@@ -24,14 +24,18 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.question}</Text>
-        <Icon
-          raised
-          name='refresh'
-          type='font-awesome'
-          color='#78B9FF'
-          onPress={() => this.updateText()}
-        />
+        <View style={styles.text}>
+          <Text>{this.state.question}</Text>
+        </View>
+        <View style={styles.button}>
+          <Icon
+            raised
+            name='refresh'
+            type='font-awesome'
+            color='#78B9FF'
+            onPress={() => this.updateText()}
+          />
+        </View>
       </View>
     );
   }
@@ -42,9 +46,20 @@ const question = () => {
   return q_hash[Math.floor(Math.random() * q_hash.length)];
 }
 
-
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    flex: 2,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
