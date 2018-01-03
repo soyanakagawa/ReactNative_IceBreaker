@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 2,
+    width: '90%',
     backgroundColor: '#fff',
     // backgroundColor: 'skyblue', // for Debug
     alignItems: 'center',
