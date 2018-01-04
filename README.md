@@ -1,3 +1,7 @@
+## Demo
+
+![demo.gif](https://user-images.githubusercontent.com/7406214/34547336-c96d9bba-f13d-11e7-875d-abad471ff343.gif)
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
